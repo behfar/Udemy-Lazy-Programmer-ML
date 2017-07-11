@@ -38,12 +38,10 @@ def get_mse(Y, Y_hat):
 def plot_train_vs_test_curves(X, Y, sample=0.2, max_deg=20):
     N = len(X)
     train_idx = np.random.choice(N, int(N*sample))
-    print("train_idx", train_idx)
     X_train = X[train_idx]
     Y_train = Y[train_idx]
 
     test_idx = list(set(range(N)) - set(train_idx))
-    print("test_idx", test_idx)
     X_test = X[test_idx]
     Y_test = Y[test_idx]
 
